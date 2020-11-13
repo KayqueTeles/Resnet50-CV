@@ -73,7 +73,7 @@ os.chdir('/home/kayque/LENSLOAD/')
 num_epochs = 50
 batch_size = 64
 nk = 10 #10    #NÚMERO DE FOLDS
-version = 1        #VERSÃO PRA COLOCAR NAS PASTAS
+version = 2        #VERSÃO PRA COLOCAR NAS PASTAS
 PC = 1.0     #PORCENTAGEM DO DATASET DE TESTE A SER USADO
 num_classes = 2
 classes = ['lens', 'not-lens']
@@ -102,7 +102,7 @@ y_batch = os.listdir(var)
 #HERE WE'RE GOING TO START MULTIPLE PROGRAMS!
 study = [500, 490, 480, 470, 460, 450, 440, 430, 420, 410, 400]  #250, 240, 230, 220, 210, 200, 190, 180, 170, 160, 150, 140, 
 print(study)
-
+#LET'S SEE IF THIS WORKS
 begin = time.perf_counter()
 os.environ["CUDA_VISIBLE_DEVICES"]="0, 1"
 Lism1AUC, Lis1AUC, LisAUC, GlobF1s, GlobF001s, GloblF1s, GloblF001s, GlobhF1s, GlobhF001s = ([] for i in range(9))
